@@ -1,0 +1,18 @@
+/* styles/utilities.css */
+.gradient-border {
+  position: relative;
+  background: linear-gradient(white, white) padding-box,
+              linear-gradient(135deg, #FF5A28, #FF9F4A) border-box;
+  border: 1px solid transparent;
+  border-radius: 1.5rem;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.glass-dark {
+  background: rgba(30, 27, 26, 0.05);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 90, 40, 0.1);
+}
