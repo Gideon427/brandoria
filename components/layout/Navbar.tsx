@@ -153,7 +153,7 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* MOBILE */}
+          {/* MOBILE - NO ANIMATIONS ON HAMBURGER BUTTON */}
           <div className="md:hidden flex items-center gap-3">
 
             <ThemeToggle />
@@ -173,33 +173,25 @@ export default function Navbar() {
                 flex
                 items-center
                 justify-center
-                transition-all
-                duration-300
               "
             >
-
               <div className="flex flex-col gap-1.5">
+                {/* Hamburger icon - NO animation classes */}
                 <span
-                  className={`block h-[2px] w-5 bg-white rounded-full transition-all duration-300 ${
-                    mobileMenuOpen
-                      ? 'rotate-45 translate-y-[7px]'
-                      : ''
+                  className={`block h-[2px] w-5 bg-white rounded-full ${
+                    mobileMenuOpen ? 'rotate-45 translate-y-[7px]' : ''
                   }`}
                 />
 
                 <span
-                  className={`block h-[2px] w-5 bg-white rounded-full transition-all duration-300 ${
-                    mobileMenuOpen
-                      ? 'opacity-0'
-                      : ''
+                  className={`block h-[2px] w-5 bg-white rounded-full ${
+                    mobileMenuOpen ? 'opacity-0' : ''
                   }`}
                 />
 
                 <span
-                  className={`block h-[2px] w-5 bg-white rounded-full transition-all duration-300 ${
-                    mobileMenuOpen
-                      ? '-rotate-45 -translate-y-[7px]'
-                      : ''
+                  className={`block h-[2px] w-5 bg-white rounded-full ${
+                    mobileMenuOpen ? '-rotate-45 -translate-y-[7px]' : ''
                   }`}
                 />
               </div>
@@ -207,7 +199,7 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* MOBILE MENU */}
+        {/* MOBILE MENU - NO ANIMATIONS */}
         <div
           className={`
             md:hidden
@@ -215,17 +207,9 @@ export default function Navbar() {
             top-full
             left-0
             w-full
-            transition-all
-            duration-500
-            overflow-hidden
-            ${
-              mobileMenuOpen
-                ? 'opacity-100 visible translate-y-0'
-                : 'opacity-0 invisible -translate-y-4'
-            }
+            ${mobileMenuOpen ? 'block' : 'hidden'}
           `}
         >
-
           <div
             className="
               mx-4
@@ -239,7 +223,6 @@ export default function Navbar() {
               shadow-2xl
             "
           >
-
             <div className="flex flex-col gap-2">
 
               {navLinks.map((link) => (
@@ -264,7 +247,6 @@ export default function Navbar() {
                     hover:bg-white/5
                   "
                 >
-
                   <div
                     className="
                       absolute
@@ -279,7 +261,6 @@ export default function Navbar() {
                         'linear-gradient(135deg, rgba(255,120,60,0.10), rgba(72,120,255,0.08))',
                     }}
                   />
-
                   <span className="relative z-10">
                     {link.name}
                   </span>
