@@ -63,7 +63,7 @@ export default function ApproachPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-[#05050A]">
+      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-[var(--bg)] text-[var(--text)]">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full blur-[120px] opacity-30 animate-float-slow"
              style={{ background: 'radial-gradient(circle, rgba(255,90,40,0.4) 0%, transparent 70%)' }} />
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full blur-[100px] opacity-20 animate-pulse-soft"
@@ -74,10 +74,10 @@ export default function ApproachPage() {
             <span className="inline-block px-4 py-1 bg-primary/10 rounded-full text-primary text-sm font-semibold mb-5">
               OUR METHODOLOGY
             </span>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-white to-[#FF9F4A] bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-[#D4AF37] to-[#FF9F4A] bg-clip-text text-transparent">
               How we build<br />brands that lead
             </h1>
-            <p className="text-[#B0B3C0] text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+            <p className="text-muted text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
               A proven methodology rooted in psychology, driven by data, and executed with precision.
             </p>
           </div>
@@ -85,44 +85,44 @@ export default function ApproachPage() {
       </section>
 
       {/* Philosophy Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-[#05050A] to-[#0A0A12]">
+      <section className="py-16 md:py-24 bg-[var(--surface)] text-[var(--text)]">
         <div className="container-custom">
           <div className="text-center mb-16 animate-on-scroll">
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-[var(--text)] mb-4">
               Branding is not decoration. It is perception.
             </h2>
-            <p className="text-[#B0B3C0] max-w-2xl mx-auto">
+            <p className="text-muted max-w-2xl mx-auto">
               People don't respond to visuals alone. They respond to confidence, emotional positioning, trust, clarity, and perceived value.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
             {principles.map((principle, idx) => (
-              <div key={principle.title} className="text-center p-6 bg-gradient-to-br from-[#0C0F1A] to-[#07090F] rounded-2xl border border-white/10 hover:border-primary/30 transition-all animate-on-scroll">
+              <div key={principle.title} className="text-center p-6 bg-[var(--surface-strong)] rounded-2xl border border-surface hover:border-primary/30 transition-all animate-on-scroll">
                 <div className={`w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br ${principle.color} flex items-center justify-center text-3xl mb-4`}>
                   {principle.icon}
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">{principle.title}</h3>
-                <p className="text-[#9A9EB0] text-sm leading-relaxed">{principle.description}</p>
+                <h3 className="text-xl font-bold text-[var(--text)] mb-2">{principle.title}</h3>
+                <p className="text-muted text-sm leading-relaxed">{principle.description}</p>
               </div>
             ))}
           </div>
 
           {/* Methodology Timeline */}
           <div className="animate-on-scroll">
-            <h2 className="text-3xl font-serif font-bold text-white text-center mb-12">Our 5‑Phase Process</h2>
+            <h2 className="text-3xl font-serif font-bold text-[var(--text)] text-center mb-12">Our 5‑Phase Process</h2>
             <div className="space-y-6">
               {methodology.map((item, idx) => (
-                <div key={item.step} className="flex flex-col md:flex-row gap-6 p-6 bg-gradient-to-br from-[#0C0F1A] to-[#07090F] rounded-2xl border border-white/10 hover:border-primary/30 transition-all">
+                <div key={item.step} className="flex flex-col md:flex-row gap-6 p-6 bg-[var(--surface-strong)] rounded-2xl border border-surface hover:border-primary/30 transition-all">
                   <div className="md:w-24">
                     <div className="text-4xl font-bold bg-gradient-to-r from-primary to-[#FF9F4A] bg-clip-text text-transparent">{item.step}</div>
                   </div>
                   <div className="flex-1">
                     <div className="flex flex-wrap justify-between items-start mb-2">
-                      <h3 className="text-xl font-bold text-white">{item.title}</h3>
+                      <h3 className="text-xl font-bold text-[var(--text)]">{item.title}</h3>
                       <span className="text-xs text-primary/60 px-2 py-1 rounded-full bg-primary/10">{item.duration}</span>
                     </div>
-                    <p className="text-[#9A9EB0] text-sm leading-relaxed">{item.description}</p>
+                    <p className="text-muted text-sm leading-relaxed">{item.description}</p>
                   </div>
                   <div className="md:w-12 flex items-center justify-center">
                     <span className="text-2xl text-primary/40">→</span>
@@ -135,12 +135,12 @@ export default function ApproachPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 md:py-24 bg-[#0A0A12]">
+      <section className="py-16 md:py-24 bg-[var(--surface)] text-[var(--text)]">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center animate-on-scroll">
-            <div className="bg-gradient-to-br from-[#0C0F1A] to-[#07090F] rounded-3xl p-10 border border-primary/20">
-              <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">Ready to transform your brand?</h3>
-              <p className="text-[#B0B3C0] mb-6">Let's apply our methodology to your business</p>
+            <div className="bg-[var(--surface-strong)] rounded-3xl p-10 border border-primary/20">
+              <h3 className="text-2xl md:text-3xl font-bold text-[var(--text)] mb-3">Ready to transform your brand?</h3>
+              <p className="text-muted mb-6">Let's apply our methodology to your business</p>
               <Link href="/apply" className="inline-block bg-gradient-to-r from-orange-500 to-pink-500 text-white px-8 py-3 rounded-full font-semibold hover:from-orange-600 hover:to-pink-600 transition shadow-lg">
                 Start Your $699 Audit
               </Link>

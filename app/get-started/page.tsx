@@ -79,7 +79,7 @@ export default function GetStartedPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-[#05050A]">
+    <main className="min-h-screen bg-[var(--bg)] text-[var(--text)]">
       {/* Background Orbs */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full blur-[120px] animate-float-slow opacity-30" 
            style={{ background: 'radial-gradient(circle, rgba(255,90,40,0.35) 0%, rgba(255,140,60,0.15) 40%, transparent 70%)' }} />
@@ -89,16 +89,16 @@ export default function GetStartedPage() {
       <section ref={sectionRef} className="relative z-10 pt-24 pb-16">
         <div className="container-custom">
           {/* Back Link */}
-          <Link href="/" className="inline-flex items-center gap-2 text-[#B0B3C0] hover:text-white transition mb-12 animate-on-scroll">
+          <Link href="/" className="inline-flex items-center gap-2 text-muted hover:text-[var(--text)] transition mb-12 animate-on-scroll">
             <span>←</span> Back to home
           </Link>
 
           {/* Hero */}
           <div className="max-w-3xl animate-on-scroll mb-20">
-            <h1 className="text-4xl md:text-6xl font-bold leading-tight tracking-tight mb-6 bg-gradient-to-r from-white via-white to-[#FF9F4A] bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-6xl font-bold leading-tight tracking-tight mb-6 bg-gradient-to-r from-[#D4AF37] to-[#FF9F4A] bg-clip-text text-transparent">
               Begin Your Brand Transformation Today
             </h1>
-            <p className="text-[#B0B3C0] text-lg md:text-xl leading-relaxed">
+            <p className="text-muted text-lg md:text-xl leading-relaxed">
               Choose the right engagement model for your business. From quick audits to full transformations, we have a solution that matches your needs and timeline.
             </p>
           </div>
@@ -106,13 +106,13 @@ export default function GetStartedPage() {
           {/* Offerings Grid */}
           <div className="grid md:grid-cols-3 gap-6 mb-20 animate-on-scroll">
             {offerings.map((offering, i) => (
-              <div key={i} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 flex flex-col hover:border-orange-500/50 transition">
+              <div key={i} className="bg-[var(--surface)] backdrop-blur-sm border border-surface rounded-3xl p-8 flex flex-col hover:border-orange-500/50 transition">
                 <div className="text-4xl mb-4">{offering.icon}</div>
-                <h3 className="text-white font-bold text-xl mb-2">{offering.title}</h3>
-                <p className="text-[#B0B3C0] text-sm mb-6 flex-grow">{offering.description}</p>
-                <div className="border-t border-white/10 pt-4 mb-4">
+                <h3 className="text-[var(--text)] font-bold text-xl mb-2">{offering.title}</h3>
+                <p className="text-muted text-sm mb-6 flex-grow">{offering.description}</p>
+                <div className="border-t border-surface pt-4 mb-4">
                   <div className="text-[#FF9F4A] font-bold text-lg">{offering.price}</div>
-                  <p className="text-[#9A9EB0] text-xs">{offering.duration}</p>
+                  <p className="text-muted text-xs">{offering.duration}</p>
                 </div>
                 <Link
                   href={offering.link}
@@ -126,15 +126,15 @@ export default function GetStartedPage() {
 
           {/* Process Section */}
           <div className="mb-20">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 animate-on-scroll">Our Process</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-[var(--text)] mb-12 animate-on-scroll">Our Process</h2>
             <div className="grid md:grid-cols-4 gap-6 animate-on-scroll">
               {steps.map((step, i) => (
-                <div key={i} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
+                <div key={i} className="bg-[var(--surface)] backdrop-blur-sm border border-surface rounded-2xl p-6">
                   <div className="text-4xl font-bold bg-gradient-to-r from-orange-500 to-pink-500 bg-clip-text text-transparent mb-4">
                     {step.number}
                   </div>
-                  <h3 className="text-white font-bold mb-3">{step.title}</h3>
-                  <p className="text-[#B0B3C0] text-sm mb-4">{step.description}</p>
+                  <h3 className="text-[var(--text)] font-bold mb-3">{step.title}</h3>
+                  <p className="text-muted text-sm mb-4">{step.description}</p>
                   <div className="text-[#FF9F4A] text-xs font-semibold">{step.duration}</div>
                 </div>
               ))}
@@ -143,7 +143,7 @@ export default function GetStartedPage() {
 
           {/* FAQ Section */}
           <div className="max-w-3xl animate-on-scroll">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-12">Frequently Asked Questions</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-[var(--text)] mb-12">Frequently Asked Questions</h2>
             <div className="space-y-6">
               {[
                 {
@@ -163,9 +163,9 @@ export default function GetStartedPage() {
                   a: "Yes! Many clients start with a $699 brand audit to validate opportunities before committing to a full engagement.",
                 },
               ].map((faq, i) => (
-                <div key={i} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
-                  <h3 className="text-white font-semibold mb-3">{faq.q}</h3>
-                  <p className="text-[#B0B3C0] text-sm">{faq.a}</p>
+                <div key={i} className="bg-[var(--surface)] backdrop-blur-sm border border-surface rounded-2xl p-6">
+                  <h3 className="text-[var(--text)] font-semibold mb-3">{faq.q}</h3>
+                  <p className="text-muted text-sm">{faq.a}</p>
                 </div>
               ))}
             </div>
@@ -173,7 +173,7 @@ export default function GetStartedPage() {
 
           {/* CTA */}
           <div className="mt-20 bg-gradient-to-r from-orange-500/10 to-pink-500/10 border border-orange-500/30 rounded-3xl p-10 md:p-12 text-center animate-on-scroll">
-            <h3 className="text-2xl md:text-3xl font-bold text-white mb-6">Ready to Transform Your Brand?</h3>
+            <h3 className="text-2xl md:text-3xl font-bold text-[var(--text)] mb-6">Ready to Transform Your Brand?</h3>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 href="/apply"
@@ -183,7 +183,7 @@ export default function GetStartedPage() {
               </Link>
               <Link
                 href="/audit"
-                className="border border-white/30 text-white px-8 py-3 rounded-full font-semibold hover:bg-white/5 transition"
+                className="border border-surface text-[var(--text)] px-8 py-3 rounded-full font-semibold hover:bg-[var(--surface-strong)] transition"
               >
                 Get a Brand Audit
               </Link>

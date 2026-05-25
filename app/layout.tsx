@@ -21,6 +21,21 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: 'Brandoria – Branding & Digital Positioning Studio',
   description: 'Premium brands are not built by aesthetics alone. We build strategic brand systems that shape perception, earn trust, and position for market leadership.',
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon-96x96.png', sizes: '96x96', type: 'image/png' },
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
+    apple: [
+      { url: '/favicon-192x192.png', sizes: '192x192', type: 'image/png' },
+    ],
+    shortcut: ['/favicon.ico'],
+  },
+  manifest: '/site.webmanifest',
+  themeColor: '#FF5A28',
 };
 
 export default function RootLayout({
@@ -41,7 +56,7 @@ export default function RootLayout({
   `;
 
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable} light`}>
+    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
         <Script id="theme-init" strategy="beforeInteractive">

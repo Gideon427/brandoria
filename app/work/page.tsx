@@ -93,7 +93,7 @@ export default function WorkPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-gradient-to-b from-[#6B7195] to-[#05050A]">
+      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-gradient-to-b from-[var(--surface)] to-[var(--bg)] text-[var(--text)]">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full blur-[120px] opacity-30 animate-float-slow"
              style={{ background: 'radial-gradient(circle, rgba(255,90,40,0.4) 0%, transparent 70%)' }} />
         
@@ -102,7 +102,7 @@ export default function WorkPage() {
             <span className="inline-block px-4 py-1 bg-primary/10 rounded-full text-primary text-sm font-semibold mb-5">
               OUR WORK
             </span>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-white to-[#FF9F4A] bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-[#D4AF37] to-[#FF9F4A] bg-clip-text text-transparent">
               Brands we've transformed
             </h1>
             <p className="text-[#B0B3C0] text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
@@ -113,7 +113,7 @@ export default function WorkPage() {
       </section>
 
       {/* Projects Grid */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-[#fff] to-[#6B7195]">
+      <section className="py-16 md:py-24 bg-[var(--surface)] text-[var(--text)]">
         <div className="container-custom">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {projects.map((project, idx) => (
@@ -140,13 +140,13 @@ export default function WorkPage() {
                   <h3 className="text-xl font-bold text-white mt-2 mb-3">{project.title}</h3>
                   
                   <div className="space-y-2 mb-4">
-                    <p className="text-[#6B7195] text-xs line-through">Before: {project.before}</p>
+                    <p className="text-muted text-xs line-through">Before: {project.before}</p>
                     <p className="text-[#FF9F4A] text-xs font-semibold">After: {project.after}</p>
                   </div>
                   
                   <div className="flex gap-2 mb-4">
                     {project.metrics.map((metric) => (
-                      <span key={metric} className="text-[10px] px-2 py-1 rounded-full bg-white/5 text-white font-mono">
+                      <span key={metric} className="text-[10px] px-2 py-1 rounded-full bg-[var(--surface)] text-[var(--text)] font-mono">
                         {metric}
                       </span>
                     ))}
@@ -166,7 +166,7 @@ export default function WorkPage() {
       </section>
 
       {/* Results Summary */}
-      <section className="py-16 md:py-24 bg-[#0A0A12]">
+      <section className="py-16 md:py-24 bg-[var(--surface)] text-[var(--text)]">
         <div className="container-custom">
           <div className="grid md:grid-cols-3 gap-8 text-center animate-on-scroll">
             <div className="p-8 bg-gradient-to-br from-[#0C0F1A] to-[#07090F] rounded-2xl border border-white/10">

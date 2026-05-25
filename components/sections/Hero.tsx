@@ -100,7 +100,7 @@ export default function Hero() {
           {/* LEFT SIDE - Brand Statement */}
           <div className="animate-on-scroll">
             <div className="brand-statement">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight mb-5 bg-gradient-to-r from-white via-white to-[#FF9F4A] bg-clip-text text-transparent">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight mb-5 bg-gradient-to-r from-[#D4AF37] to-[#FF9F4A] bg-clip-text text-transparent">
                 Premium brands are not built by aesthetics alone.
               </h2>
               <div className="text-[var(--text)] text-base md:text-lg mb-6 leading-relaxed">

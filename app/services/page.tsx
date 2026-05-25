@@ -97,7 +97,7 @@ export default function ServicesPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-[#05050A]">
+      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-[var(--bg)] text-[var(--text)]">
         {/* Background Orbs */}
         <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full blur-[120px] opacity-30 animate-float-slow"
              style={{ background: 'radial-gradient(circle, rgba(255,90,40,0.4) 0%, transparent 70%)' }} />
@@ -109,10 +109,10 @@ export default function ServicesPage() {
             <span className="inline-block px-4 py-1 bg-primary/10 rounded-full text-primary text-sm font-semibold mb-5">
               WHAT WE DO
             </span>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-white to-[#FF9F4A] bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-[#D4AF37] to-[#FF9F4A] bg-clip-text text-transparent">
               Services that shape<br />how brands are perceived
             </h1>
-            <p className="text-[#B0B3C0] text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+            <p className="text-muted text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
               We don't just offer services. We build strategic systems that transform how your audience thinks, feels, and decides.
             </p>
           </div>
@@ -120,13 +120,13 @@ export default function ServicesPage() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-[#05050A] to-[#0A0A12]">
+      <section className="py-16 md:py-24 bg-[var(--surface)] text-[var(--text)]">
         <div className="container-custom">
           <div className="text-center mb-16 animate-on-scroll">
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-[var(--text)] mb-4">
               Strategic capabilities
             </h2>
-            <p className="text-[#9A9EB0] max-w-2xl mx-auto">
+            <p className="text-muted max-w-2xl mx-auto">
               Every service is built on the intersection of psychology, design, and business strategy
             </p>
           </div>
@@ -135,18 +135,18 @@ export default function ServicesPage() {
             {services.map((service, idx) => (
               <div 
                 key={service.id}
-                className="group relative bg-gradient-to-br from-[#0C0F1A] to-[#07090F] rounded-2xl p-6 border border-white/10 hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 animate-on-scroll"
+                className="group relative bg-[var(--surface-strong)] rounded-2xl p-6 border border-surface hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 animate-on-scroll"
                 style={{ transitionDelay: `${idx * 50}ms` }}
               >
                 <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform`}>
                   {service.icon}
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">{service.title}</h3>
-                <p className="text-[#B0B3C0] text-sm leading-relaxed mb-4">{service.description}</p>
-                <p className="text-[#9A9EB0] text-xs italic mb-4">{service.longDescription}</p>
+                <h3 className="text-xl font-bold text-[var(--text)] mb-2">{service.title}</h3>
+                <p className="text-muted text-sm leading-relaxed mb-4">{service.description}</p>
+                <p className="text-muted text-xs italic mb-4">{service.longDescription}</p>
                 <div className="flex flex-wrap gap-2 mt-auto">
                   {service.metrics.map((metric) => (
-                    <span key={metric} className="text-[10px] px-2 py-1 rounded-full bg-white/5 text-[#FF9F4A]">
+                    <span key={metric} className="text-[10px] px-2 py-1 rounded-full bg-[var(--surface-strong)] text-primary">
                       {metric}
                     </span>
                   ))}
@@ -158,17 +158,17 @@ export default function ServicesPage() {
       </section>
 
       {/* Process Section */}
-      <section className="py-16 md:py-24 bg-[#0A0A12]">
+      <section className="py-16 md:py-24 bg-[var(--surface)] text-[var(--text)]">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="animate-on-scroll">
               <span className="inline-block px-4 py-1 bg-primary/10 rounded-full text-primary text-sm font-semibold mb-4">
                 OUR PROCESS
               </span>
-              <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-4">
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-[var(--text)] mb-4">
                 From perception to<br />positioning to impact
               </h2>
-              <p className="text-[#B0B3C0] mb-6 leading-relaxed">
+              <p className="text-muted mb-6 leading-relaxed">
                 We follow a proven methodology that ensures every brand touchpoint works together to build trust and drive conversion.
               </p>
               <div className="space-y-4">
@@ -178,8 +178,8 @@ export default function ServicesPage() {
                       {step.step}
                     </div>
                     <div>
-                      <h4 className="font-semibold text-white group-hover:text-primary transition">{step.title}</h4>
-                      <p className="text-[#9A9EB0] text-sm">{step.description}</p>
+                      <h4 className="font-semibold text-[var(--text)] group-hover:text-primary transition">{step.title}</h4>
+                      <p className="text-muted text-sm">{step.description}</p>
                     </div>
                   </div>
                 ))}
@@ -188,17 +188,17 @@ export default function ServicesPage() {
 
             <div className="animate-on-scroll relative">
               <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-blue-500/20 rounded-3xl blur-2xl opacity-30" />
-              <div className="relative bg-gradient-to-br from-[#0C0F1A] to-[#07090F] rounded-2xl p-8 border border-white/10">
+              <div className="relative bg-[var(--surface-strong)] rounded-2xl p-8 border border-surface">
                 <div className="text-center mb-6">
                   <div className="text-5xl mb-3">⚡</div>
-                  <h3 className="text-2xl font-bold text-white">Ready to transform?</h3>
-                  <p className="text-[#B0B3C0] text-sm mt-2">Get a $699 brand audit — find $3,500+ in revenue leaks or it's free</p>
+                  <h3 className="text-2xl font-bold text-[var(--text)]">Ready to transform?</h3>
+                  <p className="text-muted text-sm mt-2">Get a $699 brand audit — find $3,500+ in revenue leaks or it's free</p>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
                   <Link href="/apply" className="text-center bg-gradient-to-r from-orange-500 to-pink-500 text-white px-6 py-3 rounded-full text-sm font-semibold hover:from-orange-600 hover:to-pink-600 transition shadow-lg">
                     Start Your Audit
                   </Link>
-                  <Link href="/contact" className="text-center border border-white/30 text-white px-6 py-3 rounded-full text-sm font-medium hover:bg-white/5 transition">
+                  <Link href="/contact" className="text-center border border-surface text-[var(--text)] px-6 py-3 rounded-full text-sm font-medium hover:bg-[var(--surface-strong)] transition">
                     Talk to Strategy
                   </Link>
                 </div>
@@ -209,42 +209,42 @@ export default function ServicesPage() {
       </section>
 
       {/* Results Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-[#0A0A12] to-[#05050A]">
+      <section className="py-16 md:py-24 bg-[var(--surface)] text-[var(--text)]">
         <div className="container-custom">
           <div className="text-center mb-12 animate-on-scroll">
-            <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-[var(--text)] mb-4">
               Proven impact across industries
             </h2>
-            <p className="text-[#9A9EB0] max-w-2xl mx-auto">
+            <p className="text-muted max-w-2xl mx-auto">
               Real results from brands who trusted us with their perception
             </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 animate-on-scroll">
-            <div className="text-center p-6 bg-white/5 rounded-2xl border border-white/10">
+            <div className="text-center p-6 bg-[var(--surface-strong)] rounded-2xl border border-surface">
               <div className="stat-number-mixed text-4xl font-bold">+180%</div>
-              <p className="text-[#9A9EB0] text-sm mt-2">Brand Perception</p>
+              <p className="text-muted text-sm mt-2">Brand Perception</p>
             </div>
-            <div className="text-center p-6 bg-white/5 rounded-2xl border border-white/10">
+            <div className="text-center p-6 bg-[var(--surface-strong)] rounded-2xl border border-surface">
               <div className="stat-number-mixed text-4xl font-bold">2.7X</div>
-              <p className="text-[#9A9EB0] text-sm mt-2">Conversion Rate</p>
+              <p className="text-muted text-sm mt-2">Conversion Rate</p>
             </div>
-            <div className="text-center p-6 bg-white/5 rounded-2xl border border-white/10">
+            <div className="text-center p-6 bg-[var(--surface-strong)] rounded-2xl border border-surface">
               <div className="stat-number-mixed text-4xl font-bold">320%</div>
-              <p className="text-[#9A9EB0] text-sm mt-2">Engagement</p>
+              <p className="text-muted text-sm mt-2">Engagement</p>
             </div>
-            <div className="text-center p-6 bg-white/5 rounded-2xl border border-white/10">
+            <div className="text-center p-6 bg-[var(--surface-strong)] rounded-2xl border border-surface">
               <div className="stat-number-mixed text-4xl font-bold">4.9/5</div>
-              <p className="text-[#9A9EB0] text-sm mt-2">Client Trust Score</p>
+              <p className="text-muted text-sm mt-2">Client Trust Score</p>
             </div>
           </div>
 
           {/* Client Logos */}
-          <div className="text-center pt-6 border-t border-white/10 animate-on-scroll">
-            <p className="text-xs uppercase tracking-wider text-[#6B7195] mb-4">Trusted by ambitious brands worldwide</p>
+          <div className="text-center pt-6 border-t border-surface animate-on-scroll">
+            <p className="text-xs uppercase tracking-wider text-muted mb-4">Trusted by ambitious brands worldwide</p>
             <div className="flex justify-center gap-6 md:gap-10 flex-wrap">
               {clients.map((client) => (
-                <span key={client} className="text-[#B8BED6] text-sm md:text-base font-medium tracking-wide hover:text-orange-400 transition-colors cursor-default">
+                <span key={client} className="text-muted text-sm md:text-base font-medium tracking-wide hover:text-orange-400 transition-colors cursor-default">
                   {client}
                 </span>
               ))}
@@ -254,25 +254,25 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-r from-[#0A0A12] to-[#05050A]">
+      <section className="py-16 md:py-24 bg-[var(--surface)] text-[var(--text)]">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-gradient-to-br from-[#0C0F1A] to-[#07090F] rounded-3xl p-10 md:p-12 border border-primary/20 animate-on-scroll">
-              <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-4">
+            <div className="bg-[var(--surface-strong)] rounded-3xl p-10 md:p-12 border border-primary/20 animate-on-scroll">
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-[var(--text)] mb-4">
                 Ready to build a brand people can't ignore?
               </h2>
-              <p className="text-[#B0B3C0] mb-8 max-w-xl mx-auto">
+              <p className="text-muted mb-8 max-w-xl mx-auto">
                 Join 120+ brands that transformed their positioning and unlocked measurable growth.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link href="/apply" className="bg-gradient-to-r from-orange-500 to-pink-500 text-white px-8 py-3 rounded-full font-semibold hover:from-orange-600 hover:to-pink-600 transition shadow-lg inline-block">
                   Start Your $699 Audit
                 </Link>
-                <Link href="/contact" className="border border-white/30 text-white px-8 py-3 rounded-full font-medium hover:bg-white/5 transition inline-block">
+                <Link href="/contact" className="border border-surface text-[var(--text)] px-8 py-3 rounded-full font-medium hover:bg-[var(--surface-strong)] transition inline-block">
                   Schedule a Call
                 </Link>
               </div>
-              <p className="text-[#6B7195] text-xs mt-6">Find $3,500+ in revenue leaks or it's free</p>
+              <p className="text-muted text-xs mt-6">Find $3,500+ in revenue leaks or it's free</p>
             </div>
           </div>
         </div>

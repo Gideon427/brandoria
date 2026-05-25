@@ -27,48 +27,48 @@ export default function AboutPage() {
 
   return (
     <>
-      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-[#05050A]">
+      <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-[var(--bg)] text-[var(--text)]">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full blur-[120px] opacity-30 animate-float-slow"
              style={{ background: 'radial-gradient(circle, rgba(255,90,40,0.4) 0%, transparent 70%)' }} />
         <div className="container-custom relative z-10 text-center">
           <div className="animate-on-scroll max-w-4xl mx-auto">
             <span className="inline-block px-4 py-1 bg-primary/10 rounded-full text-primary text-sm font-semibold mb-5">WHO WE ARE</span>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-white to-[#FF9F4A] bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-[#D4AF37] to-[#FF9F4A] bg-clip-text text-transparent">
               We engineer perception
             </h1>
-            <p className="text-[#B0B3C0] text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+            <p className="text-muted text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
               Brandoria is a strategic brand studio that builds systems shaping how people think, feel, and decide.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-gradient-to-b from-[#05050A] to-[#0A0A12]">
+      <section className="py-16 md:py-24 bg-[var(--surface)] text-[var(--text)]">
         <div className="container-custom">
           <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
             <div className="animate-on-scroll">
-              <h2 className="text-3xl md:text-4xl font-serif font-bold text-white mb-4">Not decoration.<br />Perception.</h2>
-              <p className="text-[#B0B3C0] mb-4 leading-relaxed">People don't respond to visuals alone. They respond to confidence, emotional positioning, trust, clarity, communication, and perceived value.</p>
-              <p className="text-[#9A9EB0] leading-relaxed">We build brands that shape how people think, feel, and decide — across every touchpoint.</p>
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-[var(--text)] mb-4">Not decoration.<br />Perception.</h2>
+              <p className="text-muted mb-4 leading-relaxed">People don't respond to visuals alone. They respond to confidence, emotional positioning, trust, clarity, communication, and perceived value.</p>
+              <p className="text-muted leading-relaxed">We build brands that shape how people think, feel, and decide — across every touchpoint.</p>
             </div>
-            <div className="animate-on-scroll bg-gradient-to-br from-[#0C0F1A] to-[#07090F] rounded-2xl p-8 border border-white/10">
+            <div className="animate-on-scroll bg-[var(--surface-strong)] rounded-2xl p-8 border border-surface">
               <div className="grid grid-cols-2 gap-4 text-center">
-                <div><div className="stat-number-mixed text-4xl font-bold">120+</div><p className="text-[#9A9EB0] text-sm">Brands Transformed</p></div>
-                <div><div className="stat-number-mixed text-4xl font-bold">$2.1M</div><p className="text-[#9A9EB0] text-sm">Leaks Found</p></div>
-                <div><div className="stat-number-mixed text-4xl font-bold">2.7X</div><p className="text-[#9A9EB0] text-sm">Avg. Conversion Lift</p></div>
-                <div><div className="stat-number-mixed text-4xl font-bold">4.8/5</div><p className="text-[#9A9EB0] text-sm">Trust Score</p></div>
+                <div><div className="stat-number-mixed text-4xl font-bold">120+</div><p className="text-muted text-sm">Brands Transformed</p></div>
+                <div><div className="stat-number-mixed text-4xl font-bold">$2.1M</div><p className="text-muted text-sm">Leaks Found</p></div>
+                <div><div className="stat-number-mixed text-4xl font-bold">2.7X</div><p className="text-muted text-sm">Avg. Conversion Lift</p></div>
+                <div><div className="stat-number-mixed text-4xl font-bold">4.8/5</div><p className="text-muted text-sm">Trust Score</p></div>
               </div>
             </div>
           </div>
 
           <div className="text-center mb-12 animate-on-scroll">
-            <h2 className="text-3xl font-serif font-bold text-white mb-4">Our Values</h2>
+            <h2 className="text-3xl font-serif font-bold text-[var(--text)] mb-4">Our Values</h2>
           </div>
           <div className="grid md:grid-cols-4 gap-6 mb-20">
             {values.map((value) => (
-              <div key={value.title} className="text-center p-6 bg-gradient-to-br from-[#0C0F1A] to-[#07090F] rounded-2xl border border-white/10 animate-on-scroll">
-                <h3 className="text-xl font-bold text-white mb-2">{value.title}</h3>
-                <p className="text-[#9A9EB0] text-sm">{value.desc}</p>
+              <div key={value.title} className="text-center p-6 bg-[var(--surface-strong)] rounded-2xl border border-surface animate-on-scroll">
+                <h3 className="text-xl font-bold text-[var(--text)] mb-2">{value.title}</h3>
+                <p className="text-muted text-sm">{value.desc}</p>
               </div>
             ))}
           </div>

@@ -43,7 +43,7 @@ export default function VideoPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-[#05050A]">
+    <main className="min-h-screen bg-[var(--bg)] text-[var(--text)]">
       {/* Background Orbs */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full blur-[120px] animate-float-slow opacity-30" 
            style={{ background: 'radial-gradient(circle, rgba(255,90,40,0.35) 0%, rgba(255,140,60,0.15) 40%, transparent 70%)' }} />
@@ -53,54 +53,54 @@ export default function VideoPage() {
       <section ref={sectionRef} className="relative z-10 pt-24 pb-16">
         <div className="container-custom">
           {/* Back Link */}
-          <Link href="/" className="inline-flex items-center gap-2 text-[#B0B3C0] hover:text-white transition mb-12 animate-on-scroll">
+          <Link href="/" className="inline-flex items-center gap-2 text-muted hover:text-[var(--text)] transition mb-12 animate-on-scroll">
             <span>←</span> Back to home
           </Link>
 
           {/* Main Video */}
           <div className="max-w-4xl mx-auto mb-16 animate-on-scroll">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            <h1 className="text-4xl md:text-5xl font-bold text-[var(--text)] mb-4">
               AURORA: Intelligence that moves business forward
             </h1>
-            <p className="text-[#B0B3C0] text-lg mb-8">
+            <p className="text-muted text-lg mb-8">
               Discover how AI-powered brand positioning can transform your market perception and drive sustainable growth.
             </p>
 
             {/* Video Player Placeholder */}
-            <div className="relative w-full bg-black/60 rounded-3xl overflow-hidden border border-white/10 mb-8">
+            <div className="relative w-full bg-[rgba(var(--text-rgb),0.1)] rounded-3xl overflow-hidden border border-surface mb-8">
               <div className="aspect-video flex items-center justify-center">
                 <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 to-pink-500/20"></div>
                 <div className="relative z-10 flex flex-col items-center gap-4">
                   <div className="w-20 h-20 rounded-full bg-gradient-to-r from-orange-500 to-pink-500 flex items-center justify-center hover:scale-110 transition cursor-pointer">
                     <span className="text-4xl">▶</span>
                   </div>
-                  <p className="text-white text-center px-4">
+                  <p className="text-[var(--text)] text-center px-4">
                     <strong>Video: The Future of Brand Positioning</strong>
                     <br />
-                    <span className="text-[#B0B3C0] text-sm">Duration: 12:45</span>
+                    <span className="text-muted text-sm">Duration: 12:45</span>
                   </p>
                 </div>
               </div>
             </div>
 
             {/* Video Description */}
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 mb-8">
-              <h3 className="text-white font-bold text-lg mb-4">In this video:</h3>
-              <ul className="space-y-3 text-[#B0B3C0]">
+            <div className="bg-[var(--surface)] backdrop-blur-sm border border-surface rounded-2xl p-8 mb-8">
+              <h3 className="text-[var(--text)] font-bold text-lg mb-4">In this video:</h3>
+              <ul className="space-y-3 text-muted">
                 <li className="flex items-start gap-3">
-                  <span className="text-[#FF9F4A]">✓</span>
+                  <span className="text-primary">✓</span>
                   <span>How top brands use strategic positioning to command premium pricing</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-[#FF9F4A]">✓</span>
+                  <span className="text-primary">✓</span>
                   <span>The 3 components of unshakeable brand perception</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-[#FF9F4A]">✓</span>
+                  <span className="text-primary">✓</span>
                   <span>Real case studies: How our clients achieved 2.7X conversion rates</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <span className="text-[#FF9F4A]">✓</span>
+                  <span className="text-primary">✓</span>
                   <span>A framework you can apply to your brand immediately</span>
                 </li>
               </ul>
@@ -116,7 +116,7 @@ export default function VideoPage() {
               </Link>
               <Link
                 href="/apply"
-                className="border border-white/30 text-white px-8 py-3 rounded-full font-semibold hover:bg-white/5 transition"
+                className="border border-surface text-[var(--text)] px-8 py-3 rounded-full font-semibold hover:bg-[var(--surface-strong)] transition"
               >
                 Apply to Work Together
               </Link>
@@ -125,11 +125,11 @@ export default function VideoPage() {
 
           {/* Related Videos */}
           <div className="max-w-6xl mx-auto animate-on-scroll">
-            <h2 className="text-3xl font-bold text-white mb-8">Related Videos</h2>
+            <h2 className="text-3xl font-bold text-[var(--text)] mb-8">Related Videos</h2>
             <div className="grid md:grid-cols-3 gap-6">
               {relatedVideos.map((video, i) => (
                 <div key={i} className="group cursor-pointer">
-                  <div className="relative mb-4 rounded-2xl overflow-hidden border border-white/10 hover:border-orange-500/50 transition">
+                  <div className="relative mb-4 rounded-2xl overflow-hidden border border-surface hover:border-orange-500/50 transition">
                     <img
                       src={video.thumbnail}
                       alt={video.title}
@@ -141,8 +141,8 @@ export default function VideoPage() {
                       </div>
                     </div>
                   </div>
-                  <h3 className="text-white font-semibold group-hover:text-orange-400 transition">{video.title}</h3>
-                  <p className="text-[#B0B3C0] text-sm">{video.description}</p>
+                  <h3 className="text-[var(--text)] font-semibold group-hover:text-orange-400 transition">{video.title}</h3>
+                  <p className="text-muted text-sm">{video.description}</p>
                 </div>
               ))}
             </div>
@@ -150,8 +150,8 @@ export default function VideoPage() {
 
           {/* Video Course Teaser */}
           <div className="max-w-3xl mx-auto mt-16 bg-gradient-to-r from-orange-500/10 to-pink-500/10 border border-orange-500/30 rounded-3xl p-10 md:p-12 text-center animate-on-scroll">
-            <h3 className="text-2xl font-bold text-white mb-4">Want to go deeper?</h3>
-            <p className="text-[#B0B3C0] mb-6">
+            <h3 className="text-2xl font-bold text-[var(--text)] mb-4">Want to go deeper?</h3>
+            <p className="text-muted mb-6">
               Join our Brand Mastery course and learn the complete framework we use to build category leaders.
             </p>
             <button className="bg-gradient-to-r from-orange-500 to-pink-500 text-white px-8 py-3 rounded-full font-semibold hover:from-orange-600 hover:to-pink-600 transition">

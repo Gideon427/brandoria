@@ -43,7 +43,7 @@ export default function ApplyPage() {
   };
 
   return (
-    <main className="min-h-screen bg-[#05050A]">
+    <main className="min-h-screen bg-[var(--bg)] text-[var(--text)]">
       {/* Background Orbs */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full blur-[120px] animate-float-slow opacity-30" 
            style={{ background: 'radial-gradient(circle, rgba(255,90,40,0.35) 0%, rgba(255,140,60,0.15) 40%, transparent 70%)' }} />
@@ -53,75 +53,75 @@ export default function ApplyPage() {
       <section ref={sectionRef} className="relative z-10 pt-24 pb-16">
         <div className="container-custom">
           {/* Back Link */}
-          <Link href="/" className="inline-flex items-center gap-2 text-[#B0B3C0] hover:text-white transition mb-12 animate-on-scroll">
+          <Link href="/" className="inline-flex items-center gap-2 text-muted hover:text-[var(--text)] transition mb-12 animate-on-scroll">
             <span>←</span> Back to home
           </Link>
 
           {/* Heading */}
           <div className="max-w-3xl animate-on-scroll mb-12">
-            <h1 className="text-4xl md:text-6xl font-bold leading-tight tracking-tight mb-6 bg-gradient-to-r from-white via-white to-[#FF9F4A] bg-clip-text text-transparent">
+            <h1 className="text-4xl md:text-6xl font-bold leading-tight tracking-tight mb-6 bg-gradient-to-r from-[#D4AF37] to-[#FF9F4A] bg-clip-text text-transparent">
               Let's Build Something Exceptional Together
             </h1>
-            <p className="text-[#B0B3C0] text-lg md:text-xl leading-relaxed">
+            <p className="text-muted text-lg md:text-xl leading-relaxed">
               Tell us about your brand, your vision, and your goals. We'll evaluate the opportunity and get back to you within 48 hours with a custom proposal.
             </p>
           </div>
 
           {/* Form */}
           <div className="max-w-2xl animate-on-scroll">
-            <form onSubmit={handleSubmit} className="space-y-6 bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 md:p-10">
+            <form onSubmit={handleSubmit} className="space-y-6 bg-[var(--surface)] backdrop-blur-sm border border-surface rounded-3xl p-8 md:p-10">
               {/* Name */}
               <div>
-                <label className="block text-white font-semibold mb-2">Your Name</label>
+                <label className="block text-[var(--text)] font-semibold mb-2">Your Name</label>
                 <input
                   type="text"
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="John Doe"
-                  className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-[#9A9EB0] focus:outline-none focus:border-orange-500/50 transition"
+                  className="w-full bg-[rgba(var(--text-rgb),0.08)] border border-surface rounded-xl px-4 py-3 text-[var(--text)] placeholder:text-muted focus:outline-none focus:border-orange-500/50 transition"
                   required
                 />
               </div>
 
               {/* Email */}
               <div>
-                <label className="block text-white font-semibold mb-2">Email Address</label>
+                <label className="block text-[var(--text)] font-semibold mb-2">Email Address</label>
                 <input
                   type="email"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="john@company.com"
-                  className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-[#9A9EB0] focus:outline-none focus:border-orange-500/50 transition"
+                  className="w-full bg-[rgba(var(--text-rgb),0.08)] border border-surface rounded-xl px-4 py-3 text-[var(--text)] placeholder:text-muted focus:outline-none focus:border-orange-500/50 transition"
                   required
                 />
               </div>
 
               {/* Company */}
               <div>
-                <label className="block text-white font-semibold mb-2">Company / Brand</label>
+                <label className="block text-[var(--text)] font-semibold mb-2">Company / Brand</label>
                 <input
                   type="text"
                   name="company"
                   value={formData.company}
                   onChange={handleChange}
                   placeholder="Your company name"
-                  className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-[#9A9EB0] focus:outline-none focus:border-orange-500/50 transition"
+                  className="w-full bg-[rgba(var(--text-rgb),0.08)] border border-surface rounded-xl px-4 py-3 text-[var(--text)] placeholder:text-muted focus:outline-none focus:border-orange-500/50 transition"
                   required
                 />
               </div>
 
               {/* Message */}
               <div>
-                <label className="block text-white font-semibold mb-2">Tell us about your project</label>
+                <label className="block text-[var(--text)] font-semibold mb-2">Tell us about your project</label>
                 <textarea
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
                   placeholder="What are your brand challenges? What's your ideal outcome?"
                   rows={5}
-                  className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-[#9A9EB0] focus:outline-none focus:border-orange-500/50 transition resize-none"
+                  className="w-full bg-[rgba(var(--text-rgb),0.08)] border border-surface rounded-xl px-4 py-3 text-[var(--text)] placeholder:text-muted focus:outline-none focus:border-orange-500/50 transition resize-none"
                   required
                 />
               </div>
@@ -134,7 +134,7 @@ export default function ApplyPage() {
                 Send Application
               </button>
 
-              <p className="text-center text-[#9A9EB0] text-sm">
+              <p className="text-center text-muted text-sm">
                 We'll review your application and respond within 48 hours.
               </p>
             </form>
@@ -142,22 +142,22 @@ export default function ApplyPage() {
 
           {/* Info Cards */}
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mt-16 animate-on-scroll">
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
+            <div className="bg-[var(--surface)] backdrop-blur-sm border border-surface rounded-2xl p-6">
               <div className="text-[#FF9F4A] text-2xl mb-3">⚡</div>
-              <h3 className="text-white font-semibold mb-2">Fast Turnaround</h3>
-              <p className="text-[#B0B3C0] text-sm">We evaluate applications and respond with custom proposals in 48 hours.</p>
+              <h3 className="text-[var(--text)] font-semibold mb-2">Fast Turnaround</h3>
+              <p className="text-muted text-sm">We evaluate applications and respond with custom proposals in 48 hours.</p>
             </div>
 
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
+            <div className="bg-[var(--surface)] backdrop-blur-sm border border-surface rounded-2xl p-6">
               <div className="text-[#FF9F4A] text-2xl mb-3">🎯</div>
-              <h3 className="text-white font-semibold mb-2">Selective Partners</h3>
-              <p className="text-[#B0B3C0] text-sm">We work with brands serious about positioning, perception, and growth.</p>
+              <h3 className="text-[var(--text)] font-semibold mb-2">Selective Partners</h3>
+              <p className="text-muted text-sm">We work with brands serious about positioning, perception, and growth.</p>
             </div>
 
-            <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
+            <div className="bg-[var(--surface)] backdrop-blur-sm border border-surface rounded-2xl p-6">
               <div className="text-[#FF9F4A] text-2xl mb-3">💡</div>
-              <h3 className="text-white font-semibold mb-2">Custom Solutions</h3>
-              <p className="text-[#B0B3C0] text-sm">Every proposal is tailored to your specific brand challenges and goals.</p>
+              <h3 className="text-[var(--text)] font-semibold mb-2">Custom Solutions</h3>
+              <p className="text-muted text-sm">Every proposal is tailored to your specific brand challenges and goals.</p>
             </div>
           </div>
         </div>
